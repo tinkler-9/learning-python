@@ -44,7 +44,9 @@ print('-----------------')
 
 #help("round")
 print(round(e,10))
-import math   # the math module must be imported before we can use it
+import math
+
+import numpy as np   # the math module must be imported before we can use it
 print(math.log(2.718281828459045))  # the natural logarithm (base e)
 ## 1.0
 print(math.floor(-7.5))  # the floor function
@@ -52,5 +54,5 @@ print(math.floor(-7.5))  # the floor function
 print(math.sin(math.pi))  # sin(pi) equals 0 (with small numeric error)
 ## 1.2246467991473532e-16
 print(math.pi)
-import numpy as np
+#import numpy as np
 print(np.random.rand())
