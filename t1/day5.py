@@ -38,3 +38,35 @@ def max3(a,b,c):
         m=c
     return m
 print(max3(20, 40, 15))
+def med3(a,b,c):
+    """
+    Write a function med3 which defines the median of three given values (the value that is in-between two other ones).
+    """
+    m=b
+    if a<m:
+        if m>c:
+            if a>c:
+               m=a
+            else:
+                m=c
+        else:
+            m=b
+    else:
+        if a>c:
+           if b<c:
+              m=c
+           else:
+               m=b
+               
+    return m
+print("____")
+print(med3(4000, 40, 400))
+
+print(med3(2, 3, 4) == 3)
+print(med3(2, 4, 3) == 3)
+print(med3(3, 2, 4) == 3)
+print(med3(3, 4, 2) == 3)
+print(med3(4, 3, 2) == 3)
+print(med3(4, 2, 3) == 3)
+    
+
