@@ -42,25 +42,25 @@ def med3(a,b,c):
     """
     Write a function med3 which defines the median of three given values (the value that is in-between two other ones).
     """
-    m=b
-    if a<m:
-        if m>c:
-            if a>c:
-               m=a
+    if a<b:
+        if a<c:
+            if b<c:
+               m=b
             else:
                 m=c
         else:
-            m=b
+            m=a
     else:
         if a>c:
-           if b<c:
-              m=c
+           if b>c:
+              m=b
            else:
-               m=b
+               m=c
+        else:
+            m=a
                
     return m
-print("____")
-print(med3(4000, 40, 400))
+
 
 print(med3(2, 3, 4) == 3)
 print(med3(2, 4, 3) == 3)
@@ -70,3 +70,5 @@ print(med3(4, 3, 2) == 3)
 print(med3(4, 2, 3) == 3)
     
 
+my_list = [4,5,8,1]
+print(my_list * 2)
