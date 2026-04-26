@@ -72,3 +72,55 @@ print(med3(4, 2, 3) == 3)
 
 my_list = [4,5,8,1]
 print(my_list * 2)
+
+def min4(a, b, c, d):
+    """
+    A function to determine the minimum of 4 given inputs
+    (alternative version).
+    """
+    m = a  # a local (temporary/auxiliary) variable
+    if b < m:
+        m = b
+    if c < m:   # be careful! no `else` or `elif` here — it's a separate `if`
+        m = c
+    if d<m:
+        m=d
+    return m
+print(min4(2, 3, 4,5) == 2)
+print(min4(2, 3, 5,4) == 2)
+print(min4(2, 4, 3,5) == 2)
+print(min4(2, 4, 5,3) == 2)
+print(min4(2, 5, 4,3) == 2)
+print(min4(2, 5, 3,4) == 2)
+
+print(min4(3, 2, 4,5) == 2)
+print(min4(3, 2, 5,4) == 2)
+print(min4(3, 4, 5,2) == 2)
+print(min4(3, 4, 2,5) == 2)
+print(min4(3, 5, 4,2) == 2)
+print(min4(3, 5, 2,4) == 2)
+
+from itertools import permutations
+
+perm = permutations([2, 3, 4, 5])
+for p in perm:
+    print(f"min4({p[0]}, {p[1]}, {p[2]}, {p[3]}): {min4(p[0], p[1], p[2], p[3]) == 2}")
+
+def med3vol2(a,b,c):
+    m=[a,b,c]
+    m.sort()
+    return m[1]
+print(med3vol2(2, 3, 4) == 3)
+print(med3vol2(2, 4, 3) == 3)
+print(med3vol2(3, 2, 4) == 3)
+print(med3vol2(3, 4, 2) == 3)
+print(med3vol2(4, 3, 2) == 3)
+print(med3vol2(4, 2, 3) == 3)
+
+for i1 in range(2,6):
+     for i2 in range(2,6):
+         for i3 in range(2,6):
+             for i4 in range(2,6):
+                 # if i1!=i2 and i2!=i3 and i3!=i4 and i1!=i3 and i1!=i4 and i2!=i4:
+                 if len({i1, i2, i3, i4}) == 4:
+                     print(i1,i2,i3,i4, min4(i1,i2,i3,i4) == 2)
