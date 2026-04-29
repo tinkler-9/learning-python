@@ -123,4 +123,21 @@ for i1 in range(2,6):
              for i4 in range(2,6):
                  # if i1!=i2 and i2!=i3 and i3!=i4 and i1!=i3 and i1!=i4 and i2!=i4:
                  if len({i1, i2, i3, i4}) == 4:
-                     print(i1,i2,i3,i4, min4(i1,i2,i3,i4) == 2)
+                     print(f"i1={i1},i2={i2},i3={i3},i4={i4}", min4(i1,i2,i3,i4) == 2)
+
+def print_x_and_fx(x, f):
+    """
+    Arguments: x - some object; f - a function to be called on x
+    """
+    print(f"x = {x} and f(x) = {f(x)}")
+import math
+print_x_and_fx(4, lambda x: x**2)
+## x = 4 and f(x) = 16
+print_x_and_fx(math.pi/4, lambda x: round(math.cos(x), 5))
+## x = 0.7853981633974483 and f(x) = 0.70711
+
+sqr = lambda x: x**0.5
+a=4
+print(f"sqr {a} = {sqr(a)}")
+
+print(range(0))
