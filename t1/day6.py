@@ -1,4 +1,4 @@
-x = ["one", "two", "three", "four", "five"]
+x = ["one", "two", "three", "four", "five","one"]
 print(x[1:4])  # from the second to the fifth (exclusive)
 print(x[-1:0:-2])  # from the last to first (exclusive) by every second backwards
 print(x[3:])  # from the third element to the end
@@ -19,7 +19,7 @@ l.reverse()
 print(l)
 l.clear()
 print(l)
-l.extend([1,2,3,4,5,6])
+l.extend([11,22,33,44,55,66,3])
 print(l)
 l2=l.copy()
 print(l2)
@@ -28,11 +28,15 @@ print(l2)
 print(l)
 print(x.count("one"))
 print(x.index("five"))
-l.insert(3,33)
+l.insert(0,35)
+print(f"after l.insert(0,35) {l}")
+print(l.pop(0))
+print(f"after l.pop(0) {l}")
+l.sort()
 print(l)
 '''
 help("list")
-append(self, object, /)
+    append(self, object, /)
  |      Append object to the end of the list.
  |
  |  clear(self, /)
@@ -43,7 +47,7 @@ append(self, object, /)
  |
  |  count(self, value, /)
  |      Return number of occurrences of value.
-extend(self, iterable, /)
+    extend(self, iterable, /)
  |      Extend list by appending elements from the iterable.
  |
  |  index(self, value, start=0, stop=9223372036854775807, /)
@@ -76,3 +80,8 @@ The sort is in-place (i.e. the list itself is modified) and stable (i.e. the
  |
  |      The reverse flag can be set to sort in descending order.
  '''
+tuples=(1,2,3)
+r=range(1,4)
+strings="one"
+print(f"{tuples}\n{r}\n{strings}")
+#s=strings.copy()
