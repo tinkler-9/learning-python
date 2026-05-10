@@ -23,20 +23,21 @@ print('--------')
 z = {"a":3, "b":4}
 x = [z, {"c":5, "d": 6}]
 y = x.copy()
-print(y)
+print(f"y={y}")
 
 z['a'] = 7
 x[0] = [{"t": 89}]
-print(y)
+print(f"y={y}")
+print(f"x={x}")
 
 from copy import deepcopy
 w = deepcopy(x)
 z['a'] = 9
-print(w)
+print(f"w={w}")
 
 print('-----------')
 
-aa = [[2,3], [4,5]]
+'''aa = [[2,3], [4,5]]
 ab = aa.copy()
 
 ab = [aa[0], aa[1]]
@@ -57,5 +58,5 @@ ptr2 = [2,4]
 
 aa[0] = [5,6]
 ptr5 = [5,6]
-ptr1 = [ptr5, ptr3]
+ptr1 = [ptr5, ptr3]'''
 
