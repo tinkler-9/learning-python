@@ -26,14 +26,16 @@ y = x.copy()
 print(f"y={y}")
 
 z['a'] = 7
+print(f"x={x}")
 x[0] = [{"t": 89}]
 print(f"y={y}")
 print(f"x={x}")
 
 from copy import deepcopy
-w = deepcopy(x)
+w = deepcopy(y)
 z['a'] = 9
 print(f"w={w}")
+print(f"y={y}")
 
 print('-----------')
 
