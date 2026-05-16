@@ -13,10 +13,10 @@ for y in range(0,len(x)):
     print(f"{y}\t{x[y]['id']}\t\t{x[y]['name']}\t\t{x[y]['owner']['login']}")
     
 
-print('---------------------------------')
+print('---------------------------------111')
 for y in x:
     #print(y)
-    print(f"{y['id']}\t\t{y['name']}\t\t{y['owner']['login']}")
+    print(f"{y['id']:20} {y['name']:20} {y['owner']['login']:20}")
 
 
 print('---------------------------------')    
