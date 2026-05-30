@@ -13,4 +13,20 @@ print(x.astype(float))
 print(np.array([True, False, False, True]))
 print(np.array(["spam", "spam", "bacon", "spam"]))
 print(np.arange(0, 10, 2))
+print(np.linspace([0,4], 3,3))
 print(np.linspace([0,4], [1, 6], 3))
+print(np.repeat(3, 6))  # six 3s
+## array([3, 3, 3, 3, 3, 3])
+print(np.repeat([1, 2], 3))  # three 1s, three 2s
+## array([1, 1, 1, 2, 2, 2])
+print(np.repeat([1, 2], [3, 5]))  # three 1s, five 2s
+## array([1, 1, 1, 2, 2, 2, 2, 2])
+print(np.tile([1, 2], 3))  # repeat [1, 2] three times
+## array([1, 2, 1, 2, 1, 2])
+print(np.repeat([1, 2], 3))
+print(np.zeros(3,int))
+print(np.ones(5))
+print(np.random.rand(5))
+print(np.random.choice(np.arange(1, 10), 20))
+population=np.genfromtxt("https://raw.githubusercontent.com/gagolews/teaching-data/refs/heads/master/marek/population_largest_cities_unnamed.txt")
+print(population)
