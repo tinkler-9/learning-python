@@ -7,3 +7,6 @@ counts, bins, __not_important = plt.hist(weight, bins=11,
     color="lightgray", edgecolor="red")
 plt.ylabel("Count")
 plt.show()
+
+#plt.hist
+#numpy.histogram 
